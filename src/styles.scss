@@ -49,3 +49,10 @@ body {
     color: #333;
   }
 }
+
+@media (max-width: 850px) {
+  .boxes{
+    display: flex;
+    flex-direction: column;
+  }
+}
