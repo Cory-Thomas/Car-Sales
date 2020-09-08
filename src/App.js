@@ -8,16 +8,19 @@ import { removeFeature } from './actions';
 
 const App = ({ car, additionalFeatures, additionalPrice }) => {
   return (
-    <div className="boxes">
-      <div className="box">
-        <Header car={ car } />
-        <AddedFeatures car={ car } removeFeature={ removeFeature } />
+    <>
+      <h1>Car Builder: </h1>
+      <div className="boxes">
+        <div className="box">
+          <Header car={ car } />
+          <AddedFeatures car={ car } removeFeature={ removeFeature } />
+        </div>
+        <div className="box">
+          <AdditionalFeatures additionalFeatures={ additionalFeatures } />
+          <Total car={ car } additionalPrice={ additionalPrice } />
+        </div>
       </div>
-      <div className="box">
-        <AdditionalFeatures additionalFeatures={ additionalFeatures } />
-        <Total car={ car } additionalPrice={ additionalPrice } />
-      </div>
-    </div>
+    </>
   );
 };
 
